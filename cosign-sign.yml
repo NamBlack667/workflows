@@ -21,7 +21,7 @@ jobs:
 
       - name: Sign File
         run: |
-          echo "${{ secrets.COSIGN_KEY }}" > cosign.key
+          echo "${{ secrets.MY_COSIGN_KEY }}" > cosign.key
           cosign verify-blob --key ./keys/cosign.pub --signature signature.sig ./files/windows.exe
 
       - name: Verify File
